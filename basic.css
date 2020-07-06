@@ -1,0 +1,143 @@
+*{padding: 0;margin: 0;box-sizing: border-box;}
+body{
+    height: 100vh;
+    background: radial-gradient(at bottom,#FC427B,#7743C0,#7743C0,#FC427B);
+}
+#can {
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    background-color: #121212;
+    border:2px solid #6632B0; 
+	
+}
+h1 {
+    text-align: center;
+    font-size: 3em;
+    padding: 0.4em;
+    text-decoration: underline;
+	color:#ff8000;
+}
+.game-status-details {
+    display: block;
+    /*flex-wrap: wrap;*/
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;   
+    padding: 0.1em;
+    text-align: center;
+}
+.rating,
+.move-counter,
+.timer,
+.restart-btn {
+    width: initial;
+}
+
+.move-counter, .lives {
+    font-size: 1.3em;
+    margin-left: 12px;
+}
+
+.rating {
+    font-size: 1.4em;
+    color: #FFEA00;
+    display: inline;
+}
+
+.star {
+    margin-left: -10px;
+    opacity:0.1;
+}
+.star:first-child{
+    margin-left: 0 ;
+}
+
+
+.restart-btn {
+    background: none;
+    border: none;
+    color: #000000;
+    font-size: 1.6em;
+    font-weight: 900;
+}
+
+/* Game Over Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    width: 30%;
+    margin: auto;
+    padding: 0;
+    position: relative;
+    top: 10%;
+    background-color: #EFEBE9;
+    border: 1px solid #808080;
+    border-radius: 0.5em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation: animateTop 0.4s;
+}
+
+.modal-header {
+    border-bottom: 1px solid #D7CCC8;
+    padding: 0.6em 1em;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 1.6em 0.3em 1em;
+}
+
+.modal-body .message {
+    text-align: center;
+}
+
+.modal-body .message p {
+    margin-bottom: 0.5em;
+}
+
+.game-over-icons {
+    animation: animateIcons 3s linear infinite;
+    position: relative;
+}
+
+.modal-footer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: 0 1em 1.5em;
+}
+
+.modal-footer button {
+    padding: 0.3em 1em;
+    width: 50%;
+}
+
+.close {
+    font-size: 2em;
+    float: right;
+    margin-right: 0.8em;
+    margin-top: 0.2em;
+    font-weight: bold;
+    color: #3E2723;
+    position: relative;
+    animation: animateCloseIcon 5s linear 2s infinite;
+}
+
+.close:hover, .close:focus {
+    color: #8D6E63;
+    cursor: pointer;
+}

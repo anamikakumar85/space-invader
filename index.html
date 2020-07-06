@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Space Invader</title>
+    <link rel ="stylesheet" type = "text/css" href = "basic.css">
+     <script src="basic.js"></script>
+    <script src="try.js"></script>
+    <script src="main.js" defer></script>
+  
+</head>
+<body>
+    <h1 >Space Invader Game</h1>
+    
+        <div class="game-status-details">
+          <div class="rating">
+            <span class="star">⭐</span>
+            <span class="star">⭐</span> 
+            <span class="star">⭐</span>
+            <span class="star">⭐</span>
+            <span class="star">⭐</span>
+          </div>
+          <span class="move-counter" id="moveCounter"> Your Score 0</span>
+          <span class="lives" id="lives">Lives:4</span> 
+            <!-- <button  class="refreshButton"   >↻</button>  -->
+            <input type="button" class = "refreshButton" value ="↻" onclick="location=location"/>
+           
+        </div>
+    <canvas id ="can" width ="840" height = "600"></canvas>
+  
+    <img id ="enemy" src ="img/enemy.png" style ="display:none;">
+    <img id ="ship" src ="img/playerShip.png" style ="display:none;" >
+    <img id ="laser" src ="img/laser.png" style ="display:none;" >
+    <img id ="enemy_laser" src ="img/enemy_laser.png" style ="display:none;" >
+
+
+
+
+    <!--Modal on game over -->
+    <div class="modal" id="gameOverModal">
+      <div class="modal-content">
+          <span label="close" role="button" class="close" id="closeModal">&times;</span>
+          <div class="modal-header">
+              <h2>Game Over</h2>
+          </div>
+          <div class="modal-body">
+              <div class="message">
+                  <p>Congratulations! <span class="game-over-icons">🎊 🎊 🎊</span> You successfully completed the game.</p>
+                  <p>You completed the game by destroying <span id="totalNoInvader"></span> Invaders
+                      
+                  </p>
+                  <p>Your rating is: <span id="finalStarRating"></span></p>
+              </div>
+          </div>
+          <div class="modal-footer">
+              <button id="brown-button" >Send Score &nbsp;😀</button>
+          </div>
+      </div>
+  </div>
+
+</body>
+</html>
